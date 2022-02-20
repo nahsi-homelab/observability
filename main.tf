@@ -37,9 +37,7 @@ resource "grafana_dashboard" "hashistack" {
 resource "grafana_dashboard" "general" {
   for_each = fileset("${path.module}/dashboards", "*.json")
 
-  folder      = grafana_folder.hashistack.id
   config_json = file("${path.module}/dashboards/${each.key}")
-  overwrite   = true
 }
 
 resource "grafana_dashboard" "observability" {
