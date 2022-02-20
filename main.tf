@@ -23,6 +23,10 @@ resource "grafana_folder" "observability" {
   title = "Observability"
 }
 
+resource "grafana_folder" "infra" {
+  title = "Infra"
+}
+
 resource "grafana_dashboard" "home" {
   config_json = file("${path.module}/dashboards/home.json")
 }
@@ -45,4 +49,11 @@ resource "grafana_dashboard" "observability" {
 
   folder      = grafana_folder.observability.id
   config_json = file("${path.module}/dashboards/Observability/${each.key}")
+}
+
+resource "grafana_dashboard" "infra" {
+  for_each = fileset("${path.module}/dashboards/Infra", "*.json")
+
+  folder      = grafana_folder.infra.id
+  config_json = file("${path.module}/dashboards/Infra/${each.key}")
 }
