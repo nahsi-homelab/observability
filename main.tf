@@ -15,25 +15,45 @@ provider "grafana" {
   url = "https://grafana.service.consul"
 }
 
-resource "grafana_dashboard" "home" {
-  config_json = file("${path.module}/dashboards/home.json")
-}
-
 resource "grafana_folder" "hashistack" {
   title = "HashiStack"
 }
 
+resource "grafana_folder" "observability" {
+  title = "Observability"
+}
+
+resource "grafana_folder" "infra" {
+  title = "Infra"
+}
+
+resource "grafana_dashboard" "home" {
+  config_json = file("${path.module}/dashboards/home.json")
+}
+
 resource "grafana_dashboard" "hashistack" {
-  for_each = toset(["nomad", "consul"])
+  for_each = fileset("${path.module}/dashboards/HashiStack", "*.json")
 
   folder      = grafana_folder.hashistack.id
-  config_json = file("${path.module}/dashboards/HashiStack/${each.key}.json")
+  config_json = file("${path.module}/dashboards/HashiStack/${each.key}")
 }
 
-resource "grafana_dashboard" "zfs" {
-  config_json = file("${path.module}/dashboards/zfs.json")
+resource "grafana_dashboard" "general" {
+  for_each = fileset("${path.module}/dashboards", "*.json")
+
+  config_json = file("${path.module}/dashboards/${each.key}")
 }
 
-resource "grafana_dashboard" "system" {
-  config_json = file("${path.module}/dashboards/system.json")
+resource "grafana_dashboard" "observability" {
+  for_each = fileset("${path.module}/dashboards/Observability", "*.json")
+
+  folder      = grafana_folder.observability.id
+  config_json = file("${path.module}/dashboards/Observability/${each.key}")
+}
+
+resource "grafana_dashboard" "infra" {
+  for_each = fileset("${path.module}/dashboards/Infra", "*.json")
+
+  folder      = grafana_folder.infra.id
+  config_json = file("${path.module}/dashboards/Infra/${each.key}")
 }
