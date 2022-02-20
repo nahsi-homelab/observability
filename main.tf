@@ -28,23 +28,23 @@ resource "grafana_dashboard" "home" {
 }
 
 resource "grafana_dashboard" "hashistack" {
-  for_each = toset(["nomad", "consul"])
+  for_each = fileset("${path.module}/dashboards/HashiStack", "*.json")
 
   folder      = grafana_folder.hashistack.id
-  config_json = file("${path.module}/dashboards/HashiStack/${each.key}.json")
+  config_json = file("${path.module}/dashboards/HashiStack/${each.key}")
 }
 
-resource "grafana_dashboard" "zfs" {
-  config_json = file("${path.module}/dashboards/zfs.json")
-}
+resource "grafana_dashboard" "general" {
+  for_each = fileset("${path.module}/dashboards", "*.json")
 
-resource "grafana_dashboard" "system" {
-  config_json = file("${path.module}/dashboards/system.json")
+  folder      = grafana_folder.hashistack.id
+  config_json = file("${path.module}/dashboards/${each.key}")
+  overwrite   = true
 }
 
 resource "grafana_dashboard" "observability" {
-  for_each = fileset("${path.module}/dashboards/observability", "*.json")
+  for_each = fileset("${path.module}/dashboards/Observability", "*.json")
 
   folder      = grafana_folder.observability.id
-  config_json = file("${path.module}/dashboards/observability/${each.key}")
+  config_json = file("${path.module}/dashboards/Observability/${each.key}")
 }
