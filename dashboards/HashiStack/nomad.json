@@ -20,10 +20,9 @@
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": 15764,
   "graphTooltip": 1,
-  "id": 2,
-  "iteration": 1645300339672,
+  "id": 43,
+  "iteration": 1646068784041,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -89,10 +88,10 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "VictoriaMetrics"
+            "uid": "P4169E866C3094E38"
           },
           "exemplar": false,
-          "expr": "nomad_nomad_autopilot_healthy",
+          "expr": "nomad_nomad_autopilot_healthy{dc=\"$dc\"}",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -152,10 +151,10 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "VictoriaMetrics"
+            "uid": "P4169E866C3094E38"
           },
           "exemplar": false,
-          "expr": "nomad_nomad_autopilot_failure_tolerance",
+          "expr": "nomad_nomad_autopilot_failure_tolerance{dc=\"$dc\"}",
           "instant": true,
           "interval": "",
           "legendFormat": "fault tolerance",
@@ -214,10 +213,10 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "VictoriaMetrics"
+            "uid": "P4169E866C3094E38"
           },
           "exemplar": true,
-          "expr": "100 -\nsum(nomad_client_unallocated_cpu)\n/\nsum(nomad_client_allocated_cpu\n+ nomad_client_unallocated_cpu) * 100",
+          "expr": "100 -\nsum(nomad_client_unallocated_cpu{dc=\"$dc\"}) by (dc)\n/\nsum(nomad_client_allocated_cpu{dc=\"$dc\"}\n+ nomad_client_unallocated_cpu{dc=\"$dc\"}) by (dc) * 100",
           "interval": "",
           "legendFormat": "CPU Capacity",
           "refId": "A"
@@ -274,10 +273,10 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "VictoriaMetrics"
+            "uid": "P4169E866C3094E38"
           },
           "exemplar": true,
-          "expr": "100 -\nsum(nomad_client_unallocated_memory) \n/\nsum(nomad_client_allocated_memory\n+ nomad_client_unallocated_memory) * 100",
+          "expr": "100 -\nsum(nomad_client_unallocated_memory{dc=\"$dc\"}) by (dc)\n/\nsum(nomad_client_allocated_memory{dc=\"$dc\"}\n+ nomad_client_unallocated_memory{dc=\"$dc\"}) by (dc) * 100",
           "interval": "",
           "legendFormat": "Memory Capacity",
           "refId": "A"
@@ -334,10 +333,10 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "VictoriaMetrics"
+            "uid": "P4169E866C3094E38"
           },
           "exemplar": true,
-          "expr": "100 -\nsum(nomad_client_unallocated_disk) \n/\nsum(nomad_client_allocated_disk\n+ nomad_client_unallocated_disk) * 100",
+          "expr": "100 -\nsum(nomad_client_unallocated_disk{dc=\"$dc\"}) by (dc)\n/\nsum(nomad_client_allocated_disk{dc=\"$dc\"}\n+ nomad_client_unallocated_disk{dc=\"$dc\"}) by (dc) * 100",
           "interval": "",
           "legendFormat": "Disk Capacity",
           "refId": "A"
@@ -370,7 +369,7 @@
                 {
                   "targetBlank": true,
                   "title": "System dashboard",
-                  "url": "https://grafana.service.consul/d/b4FAZ7Mmz/system?orgId=1&var-instance=${__data.fields.Client}"
+                  "url": "https://grafana.service.consul/d/b4FAZ7Mmz/system?orgId=1&var-dc=$dc&var-instance=${__data.fields.Client}"
                 }
               ],
               "mappings": [],
@@ -615,10 +614,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_uptime",
+              "expr": "nomad_client_uptime{dc=\"$dc\"}",
               "format": "table",
               "instant": true,
               "interval": "",
@@ -628,10 +627,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_running",
+              "expr": "nomad_client_allocations_running{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -642,10 +641,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "100 -\nnomad_client_unallocated_cpu\n/\n(nomad_client_allocated_cpu\n+ nomad_client_unallocated_cpu) * 100",
+              "expr": "100 -\nnomad_client_unallocated_cpu{dc=\"$dc\"}\n/\n(nomad_client_allocated_cpu{dc=\"$dc\"}\n+ nomad_client_unallocated_cpu{dc=\"$dc\"}) * 100",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -656,10 +655,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "100 -\nnomad_client_unallocated_memory\n/\n(nomad_client_allocated_memory\n+ nomad_client_unallocated_memory) * 100",
+              "expr": "100 -\nnomad_client_unallocated_memory{dc=\"$dc\"}\n/\n(nomad_client_allocated_memory{dc=\"$dc\"}\n+ nomad_client_unallocated_memory{dc=\"$dc\"}) * 100",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -670,10 +669,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "100 -\nnomad_client_unallocated_disk\n/\n(nomad_client_allocated_disk\n+ nomad_client_unallocated_disk) * 100",
+              "expr": "100 -\nnomad_client_unallocated_disk{dc=\"$dc\"}\n/\n(nomad_client_allocated_disk{dc=\"$dc\"}\n+ nomad_client_unallocated_disk{dc=\"$dc\"}) * 100",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -813,10 +812,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "increase(nomad_raft_state_candidate[1m]) > 0",
+              "expr": "increase(nomad_raft_state_candidate{dc=\"$dc\"}[1m]) > 0",
               "format": "time_series",
               "hide": false,
               "instant": false,
@@ -828,10 +827,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "increase(nomad_raft_state_leader[1m]) > 0",
+              "expr": "increase(nomad_raft_state_leader{dc=\"$dc\"}[1m]) > 0",
               "hide": false,
               "instant": false,
               "interval": "",
@@ -928,10 +927,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_leader_lastContact{quantile=\"0.9\"}",
+              "expr": "nomad_raft_leader_lastContact{dc=\"$dc\",quantile=\"0.9\"}",
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{ instance }}",
@@ -970,8 +969,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -986,7 +984,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 20
+            "y": 6
           },
           "id": 82,
           "options": {
@@ -999,15 +997,15 @@
             },
             "showHeader": true
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_blocked{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_blocked{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "instant": true,
               "interval": "",
@@ -1017,10 +1015,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_migrating{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_migrating{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1031,10 +1029,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_pending{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_pending{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1045,10 +1043,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_running{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_running{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1059,10 +1057,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_start{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_start{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1073,10 +1071,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocations_terminal{instance=~\"$client\"}",
+              "expr": "nomad_client_allocations_terminal{dc=\"$dc\",instance=~\"$client\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1148,8 +1146,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "text",
-                    "value": null
+                    "color": "text"
                   }
                 ]
               },
@@ -1161,7 +1158,7 @@
             "h": 4,
             "w": 4,
             "x": 0,
-            "y": 21
+            "y": 7
           },
           "id": 48,
           "options": {
@@ -1178,15 +1175,15 @@
             },
             "textMode": "auto"
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_status_running",
+              "expr": "nomad_nomad_job_status_running{dc=\"$dc\"}",
               "instant": true,
               "interval": "",
               "legendFormat": "Running",
@@ -1212,8 +1209,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1367,7 +1363,7 @@
             "h": 12,
             "w": 20,
             "x": 4,
-            "y": 21
+            "y": 7
           },
           "id": 47,
           "options": {
@@ -1388,15 +1384,15 @@
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_complete",
+              "expr": "nomad_nomad_job_summary_complete{dc=\"$dc\"}",
               "format": "table",
               "instant": true,
               "interval": "",
@@ -1406,10 +1402,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_failed",
+              "expr": "nomad_nomad_job_summary_failed{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1420,10 +1416,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_lost",
+              "expr": "nomad_nomad_job_summary_lost{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1434,10 +1430,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_starting",
+              "expr": "nomad_nomad_job_summary_starting{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1448,10 +1444,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_queued",
+              "expr": "nomad_nomad_job_summary_queued{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1462,10 +1458,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_summary_running",
+              "expr": "nomad_nomad_job_summary_running{dc=\"$dc\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1537,8 +1533,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "text",
-                    "value": null
+                    "color": "text"
                   }
                 ]
               },
@@ -1550,7 +1545,7 @@
             "h": 4,
             "w": 4,
             "x": 0,
-            "y": 25
+            "y": 11
           },
           "id": 49,
           "options": {
@@ -1567,15 +1562,15 @@
             },
             "textMode": "auto"
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_status_pending",
+              "expr": "nomad_nomad_job_status_pending{dc=\"$dc\"}",
               "instant": true,
               "interval": "",
               "legendFormat": "Pending",
@@ -1599,8 +1594,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "text",
-                    "value": null
+                    "color": "text"
                   }
                 ]
               },
@@ -1612,7 +1606,7 @@
             "h": 4,
             "w": 4,
             "x": 0,
-            "y": 29
+            "y": 15
           },
           "id": 50,
           "options": {
@@ -1629,15 +1623,15 @@
             },
             "textMode": "auto"
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_job_status_dead",
+              "expr": "nomad_nomad_job_status_dead{dc=\"$dc\"}",
               "instant": true,
               "interval": "",
               "legendFormat": "Dead",
@@ -1742,7 +1736,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 22
+            "y": 8
           },
           "id": 54,
           "options": {
@@ -1761,10 +1755,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 1000000",
+              "expr": "nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 1000000",
               "format": "table",
               "instant": true,
               "interval": "",
@@ -1774,10 +1768,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocs_memory_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
+              "expr": "nomad_client_allocs_memory_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1788,10 +1782,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_client_allocs_memory_max_usage{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
+              "expr": "nomad_client_allocs_memory_max_usage{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -1916,7 +1910,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 30
+            "y": 16
           },
           "id": 55,
           "options": {
@@ -1930,7 +1924,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -1938,14 +1932,14 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_client_allocs_cpu_total_percent{exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
+              "expr": "nomad_client_allocs_cpu_total_percent{dc=\"$dc\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
-              "legendFormat": "{{ exported_job }} - {{ task_group }} - {{ task }} - {{ instance }} - {{ alloc_id }}",
+              "legendFormat": "{{ exported_job }} - {{ task_group }} - {{ task }} - {{ instance }} - {{ alloc_id }} Mhz",
               "refId": "A"
             }
           ],
@@ -2011,7 +2005,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 30
+            "y": 16
           },
           "id": 65,
           "options": {
@@ -2025,7 +2019,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -2033,14 +2027,14 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_client_allocs_cpu_total_ticks{exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 1000000",
+              "expr": "nomad_client_allocs_cpu_total_ticks{dc=\"$dc\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 1000000",
               "format": "time_series",
               "instant": false,
               "interval": "",
-              "legendFormat": "{{ exported_job }} - {{ task_group }} - {{ task }} - {{ instance }} - {{ alloc_id }}",
+              "legendFormat": "{{ exported_job }} - {{ task_group }} - {{ task }} - {{ instance }} - {{ alloc_id }} Mhz",
               "refId": "A"
             }
           ],
@@ -2106,7 +2100,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 40
+            "y": 26
           },
           "id": 56,
           "options": {
@@ -2120,7 +2114,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -2128,10 +2122,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "(nomad_client_allocs_memory_usage{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}\n- \nnomad_client_allocs_memory_cache{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"})\n/\nnomad_client_allocs_memory_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 100",
+              "expr": "(nomad_client_allocs_memory_usage{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}\n- \nnomad_client_allocs_memory_cache{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"})\n/\nnomad_client_allocs_memory_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 100",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -2200,7 +2194,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 40
+            "y": 26
           },
           "id": 66,
           "options": {
@@ -2214,7 +2208,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -2222,10 +2216,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "(nomad_client_allocs_memory_usage{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}\n- \nnomad_client_allocs_memory_cache{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"})",
+              "expr": "(nomad_client_allocs_memory_usage{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}\n- \nnomad_client_allocs_memory_cache{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"})",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -2249,7 +2243,7 @@
               "links": [
                 {
                   "title": "Set time range",
-                  "url": "https://grafana.service.consul/d/4NYOvS-7z/nomad?orgId=1&var-alloc_id=${__data.fields.alloc_id}﻿﻿&from=﻿﻿${__data.fields.from}&to=${__data.fields.to}"
+                  "url": "https://grafana.service.consul/d/4NYOvS-7z/nomad?orgId=1&var-dc=$dc&var-alloc_id=${__data.fields.alloc_id}﻿﻿&from=﻿﻿${__data.fields.from}&to=${__data.fields.to}"
                 }
               ],
               "mappings": [],
@@ -2298,7 +2292,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 50
+            "y": 36
           },
           "id": 86,
           "options": {
@@ -2318,10 +2312,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_client_allocs_oom_killed",
+              "expr": "nomad_client_allocs_oom_killed{dc=\"$dc\"}",
               "format": "table",
               "instant": false,
               "interval": "",
@@ -2332,10 +2326,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "timestamp(nomad_client_allocs_oom_killed) * 1000 - 3600000",
+              "expr": "timestamp(nomad_client_allocs_oom_killed{dc=\"$dc\"}) * 1000 - 3600000",
               "format": "table",
               "hide": false,
               "instant": false,
@@ -2347,10 +2341,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "timestamp(nomad_client_allocs_oom_killed) * 1000 + 3600000",
+              "expr": "timestamp(nomad_client_allocs_oom_killed{dc=\"$dc\"}) * 1000 + 3600000",
               "format": "table",
               "hide": false,
               "instant": false,
@@ -2476,8 +2470,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red",
-                    "value": null
+                    "color": "red"
                   },
                   {
                     "color": "light-orange",
@@ -2534,10 +2527,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "avg(nomad_client_allocs_cpu_total_percent) by (exported_job,task_group,task) <= 80",
+              "expr": "avg(nomad_client_allocs_cpu_total_percent{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}) by (exported_job,task_group,task) <= 80",
               "format": "time_series",
               "hide": false,
               "instant": false,
@@ -2592,8 +2585,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red",
-                    "value": null
+                    "color": "red"
                   },
                   {
                     "color": "light-orange",
@@ -2650,10 +2642,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "avg(\n(nomad_client_allocs_memory_usage\n-\nnomad_client_allocs_memory_cache)\n/\nnomad_client_allocs_memory_allocated * 100\n) by (exported_job,task_group,task)",
+              "expr": "avg(\n(nomad_client_allocs_memory_usage{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"}\n-\nnomad_client_allocs_memory_cache{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"})\n/\nnomad_client_allocs_memory_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\",alloc_id=~\"$alloc_id\"} * 100\n) by (exported_job,task_group,task)",
               "format": "time_series",
               "hide": false,
               "instant": false,
@@ -2720,8 +2712,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "text",
-                    "value": null
+                    "color": "text"
                   }
                 ]
               },
@@ -2752,8 +2743,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "green",
-                          "value": null
+                          "color": "green"
                         },
                         {
                           "color": "light-orange",
@@ -2797,10 +2787,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_leader_dispatchLog{quantile=\"0.9\"}",
+              "expr": "nomad_raft_leader_dispatchLog{dc=\"$dc\",quantile=\"0.9\"}",
               "hide": false,
               "interval": "",
               "intervalFactor": 1,
@@ -2810,10 +2800,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "increase(nomad_raft_leader_dispatchNumLogs[$__rate_interval])",
+              "expr": "increase(nomad_raft_leader_dispatchNumLogs{dc=\"$dc\"}[$__rate_interval])",
               "hide": false,
               "interval": "",
               "legendFormat": "Logs",
@@ -2863,8 +2853,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "yellow",
@@ -2907,10 +2896,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_commitTime{quantile=\"0.9\"}",
+              "expr": "nomad_raft_commitTime{dc=\"$dc\",quantile=\"0.9\"}",
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{ instance }}",
@@ -2961,8 +2950,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2997,10 +2985,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "increase(nomad_raft_apply[$__rate_interval])",
+              "expr": "increase(nomad_raft_apply{dc=\"$dc\"}[$__rate_interval])",
               "interval": "",
               "legendFormat": "{{ instance }}",
               "refId": "A"
@@ -3049,8 +3037,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "yellow",
@@ -3093,10 +3080,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_rpc_appendEntries{quantile=\"0.9\"}",
+              "expr": "nomad_raft_rpc_appendEntries{dc=\"$dc\",quantile=\"0.9\"}",
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{ instance }}",
@@ -3118,8 +3105,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "text",
-                    "value": null
+                    "color": "text"
                   }
                 ]
               },
@@ -3146,15 +3132,15 @@
             },
             "showUnfilled": true
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_appliedIndex",
+              "expr": "nomad_raft_appliedIndex{dc=\"$dc\"}",
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{ instance }}",
@@ -3204,8 +3190,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "yellow",
@@ -3248,10 +3233,10 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
-              "expr": "nomad_raft_fsm_apply{quantile=\"0.9\"}",
+              "expr": "nomad_raft_fsm_apply{dc=\"$dc\",quantile=\"0.9\"}",
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{ instance }}",
@@ -3291,8 +3276,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red",
-                    "value": null
+                    "color": "red"
                   },
                   {
                     "color": "#EAB839",
@@ -3328,7 +3312,7 @@
             ]
           },
           "gridPos": {
-            "h": 5,
+            "h": 7,
             "w": 12,
             "x": 0,
             "y": 11
@@ -3344,15 +3328,15 @@
             },
             "showHeader": true
           },
-          "pluginVersion": "8.4.1",
+          "pluginVersion": "8.4.2",
           "targets": [
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": false,
-              "expr": "nomad_nomad_vault_token_ttl",
+              "expr": "nomad_nomad_vault_token_ttl{dc=\"$dc\"}",
               "format": "table",
               "instant": true,
               "interval": "",
@@ -3368,6 +3352,7 @@
                 "excludeByName": {
                   "Time": true,
                   "__name__": true,
+                  "dc": true,
                   "job": true
                 },
                 "indexByName": {},
@@ -3420,8 +3405,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3430,7 +3414,7 @@
             "overrides": []
           },
           "gridPos": {
-            "h": 5,
+            "h": 7,
             "w": 12,
             "x": 12,
             "y": 11
@@ -3451,7 +3435,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
               "expr": "nomad_nomad_vault_create_token{quantile=\"0.9\"}",
@@ -3462,7 +3446,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
               "expr": "nomad_nomad_vault_lookup_token{quantile=\"0.9\"}",
@@ -3474,7 +3458,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "VictoriaMetrics"
+                "uid": "P4169E866C3094E38"
               },
               "exemplar": true,
               "expr": "nomad_nomad_vault_revoke_token{quantile=\"0.9\"}",
@@ -3495,27 +3479,51 @@
   "refresh": false,
   "schemaVersion": 35,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "HashiCorp"
+  ],
   "templating": {
     "list": [
       {
         "current": {
           "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "text": "oikumene",
+          "value": "oikumene"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "P4169E866C3094E38"
+        "definition": "label_values(up{job=\"nomad\"},dc)",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "dc",
+        "options": [],
+        "query": {
+          "query": "label_values(up{job=\"nomad\"},dc)",
+          "refId": "StandardVariableQuery"
         },
-        "definition": "label_values(nomad_client_uptime, instance)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "definition": "label_values(nomad_client_uptime{dc=\"$dc\"}, instance)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "client",
         "options": [],
         "query": {
-          "query": "label_values(nomad_client_uptime, instance)",
+          "query": "label_values(nomad_client_uptime{dc=\"$dc\"}, instance)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -3526,22 +3534,22 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "P4169E866C3094E38"
-        },
-        "definition": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\"},exported_job)",
+        "definition": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\"},exported_job)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "job",
         "options": [],
         "query": {
-          "query": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\"},exported_job)",
+          "query": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\"},exported_job)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -3552,22 +3560,22 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "P4169E866C3094E38"
-        },
-        "definition": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\"},task_group)",
+        "definition": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\"},task_group)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "group",
         "options": [],
         "query": {
-          "query": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\"},task_group)",
+          "query": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\"},task_group)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -3578,22 +3586,22 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "P4169E866C3094E38"
-        },
-        "definition": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\"},task)",
+        "definition": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\"},task)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "task",
         "options": [],
         "query": {
-          "query": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\"},task)",
+          "query": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\"},task)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -3604,22 +3612,22 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "P4169E866C3094E38"
-        },
-        "definition": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\"},alloc_id)",
+        "definition": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\"},alloc_id)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "alloc_id",
         "options": [],
         "query": {
-          "query": "label_values(nomad_client_allocs_cpu_allocated{instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\"},alloc_id)",
+          "query": "label_values(nomad_client_allocs_cpu_allocated{dc=\"$dc\",instance=~\"$client\",exported_job=~\"$job\",task_group=~\"$group\",task=~\"$task\"},alloc_id)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 2,
@@ -3638,6 +3646,6 @@
   "timezone": "",
   "title": "Nomad",
   "uid": "4NYOvS-7z",
-  "version": 9,
+  "version": 6,
   "weekStart": ""
 }
