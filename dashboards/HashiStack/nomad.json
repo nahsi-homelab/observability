@@ -2470,7 +2470,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red"
+                    "color": "red",
+                    "value": null
                   },
                   {
                     "color": "light-orange",
@@ -2518,7 +2519,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -2585,7 +2586,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red"
+                    "color": "red",
+                    "value": null
                   },
                   {
                     "color": "light-orange",
@@ -2633,7 +2635,7 @@
               "sortDesc": true
             },
             "tooltip": {
-              "mode": "multi",
+              "mode": "single",
               "sort": "none"
             }
           },
@@ -3646,6 +3648,6 @@
   "timezone": "",
   "title": "Nomad",
   "uid": "4NYOvS-7z",
-  "version": 6,
+  "version": 8,
   "weekStart": ""
 }
