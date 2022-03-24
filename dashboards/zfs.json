@@ -20,16 +20,14 @@
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": null,
   "graphTooltip": 1,
-  "id": null,
-  "iteration": 1645251251563,
+  "id": 51,
+  "iteration": 1648139025075,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -39,7 +37,6 @@
       "id": 106,
       "panels": [
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -56,8 +53,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -152,10 +148,17 @@
           },
           "id": 2,
           "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.4",
+          "pluginVersion": "8.4.1",
           "targets": [
             {
               "exemplar": true,
@@ -256,7 +259,6 @@
           "type": "table"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -295,8 +297,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -323,7 +324,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -340,7 +342,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -380,8 +381,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -408,7 +408,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -426,7 +427,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -465,8 +465,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -493,7 +492,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -510,7 +510,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -550,8 +549,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -578,7 +576,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -595,7 +594,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -634,8 +632,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -662,7 +659,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -679,7 +677,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -719,8 +716,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -747,7 +743,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -769,7 +766,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -779,7 +775,6 @@
       "id": 393,
       "panels": [
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -796,8 +791,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1016,7 +1010,6 @@
           "type": "table"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1055,8 +1048,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1100,7 +1092,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1139,8 +1130,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1184,7 +1174,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1223,8 +1212,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1268,7 +1256,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1307,8 +1294,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1352,7 +1338,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1391,8 +1376,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1436,7 +1420,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1475,8 +1458,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1525,7 +1507,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1535,7 +1516,6 @@
       "id": 14,
       "panels": [
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -1554,8 +1534,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "#EAB839",
@@ -1666,8 +1645,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "green",
-                          "value": null
+                          "color": "green"
                         },
                         {
                           "color": "red",
@@ -1734,10 +1712,17 @@
           },
           "id": 3,
           "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.4",
+          "pluginVersion": "8.4.1",
           "targets": [
             {
               "exemplar": true,
@@ -1819,7 +1804,6 @@
           "type": "table"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1858,8 +1842,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1886,7 +1869,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -1903,7 +1887,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1942,8 +1925,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -1970,7 +1952,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -1987,7 +1970,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2026,8 +2008,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2054,7 +2035,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -2071,7 +2053,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2110,8 +2091,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2138,7 +2118,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -2155,7 +2136,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2194,8 +2174,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2222,7 +2201,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -2239,7 +2219,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2278,8 +2257,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2306,7 +2284,8 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "multi"
+              "mode": "multi",
+              "sort": "none"
             }
           },
           "targets": [
@@ -2328,7 +2307,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2338,7 +2316,6 @@
       "id": 12,
       "panels": [
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -2452,10 +2429,17 @@
           },
           "id": 5,
           "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.4",
+          "pluginVersion": "8.4.1",
           "targets": [
             {
               "exemplar": true,
@@ -2567,7 +2551,6 @@
           "type": "table"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -2681,13 +2664,24 @@
           },
           "id": 8,
           "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.4",
+          "pluginVersion": "8.4.1",
           "targets": [
             {
-              "exemplar": true,
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
+              "exemplar": false,
               "expr": "zpool_scan_stats_start_ts{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"} * 1000",
               "format": "table",
               "hide": false,
@@ -2697,8 +2691,12 @@
               "refId": "A"
             },
             {
-              "exemplar": true,
-              "expr": "zpool_scan_stats_rate{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"}",
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
+              "exemplar": false,
+              "expr": "avg_over_time(rate(zpool_scan_stats_issued{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"})[30m])",
               "format": "table",
               "hide": false,
               "instant": true,
@@ -2707,7 +2705,11 @@
               "refId": "G"
             },
             {
-              "exemplar": true,
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
+              "exemplar": false,
               "expr": "zpool_scan_stats_errors{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"}",
               "format": "table",
               "instant": true,
@@ -2716,7 +2718,11 @@
               "refId": "D"
             },
             {
-              "exemplar": true,
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
+              "exemplar": false,
               "expr": "zpool_scan_stats_to_examine{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"}",
               "format": "table",
               "hide": false,
@@ -2726,7 +2732,11 @@
               "refId": "B"
             },
             {
-              "exemplar": true,
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
+              "exemplar": false,
               "expr": "zpool_scan_stats_to_process{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"}",
               "format": "table",
               "hide": false,
@@ -2797,7 +2807,6 @@
           "type": "table"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -2865,13 +2874,18 @@
               "placement": "bottom"
             },
             "tooltip": {
-              "mode": "single"
+              "mode": "single",
+              "sort": "none"
             }
           },
           "targets": [
             {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "P4169E866C3094E38"
+              },
               "exemplar": true,
-              "expr": "zpool_scan_stats_rate{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"}",
+              "expr": "rate(zpool_scan_stats_issued{instance=\"$instance\",name=~\"$pool\",state!=\"finished\"})",
               "interval": "",
               "legendFormat": "{{ name }} - {{ function }}",
               "refId": "A"
@@ -2886,7 +2900,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2896,7 +2909,6 @@
       "id": 261,
       "panels": [
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2935,8 +2947,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3018,7 +3029,10 @@
           "type": "timeseries"
         },
         {
-          "datasource": "VictoriaMetrics",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3058,8 +3072,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3115,13 +3128,10 @@
               "target": ""
             }
           ],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "ARC - hit %",
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "Most Recently Used cache",
           "fieldConfig": {
             "defaults": {
@@ -3161,8 +3171,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3215,7 +3224,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "Most Frequently Used cache",
           "fieldConfig": {
             "defaults": {
@@ -3255,8 +3263,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3314,7 +3321,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3324,7 +3330,6 @@
       "id": 340,
       "panels": [
         {
-          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3363,8 +3368,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3430,7 +3434,10 @@
           "type": "timeseries"
         },
         {
-          "datasource": "VictoriaMetrics",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3470,8 +3477,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -3516,8 +3522,6 @@
               "target": ""
             }
           ],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "ARC - hit %",
           "type": "timeseries"
         }
@@ -3527,7 +3531,6 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3537,10 +3540,7 @@
       "id": 65,
       "panels": [
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3549,7 +3549,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3584,27 +3583,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3613,7 +3601,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3648,27 +3635,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3677,7 +3653,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3712,27 +3687,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3741,7 +3705,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3776,27 +3739,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3805,7 +3757,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3840,27 +3791,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3869,7 +3809,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3904,21 +3843,13 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "short",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         }
       ],
       "repeat": "pool",
@@ -3927,20 +3858,16 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "id": 19,
       "panels": [
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -3949,7 +3876,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -3984,27 +3910,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4013,7 +3928,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4048,27 +3962,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4077,7 +3980,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4092,7 +3994,6 @@
           "legend": {
             "show": false
           },
-          "repeat": null,
           "reverseYBuckets": false,
           "targets": [
             {
@@ -4113,27 +4014,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4142,7 +4032,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4177,27 +4066,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4206,7 +4084,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4241,27 +4118,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4270,7 +4136,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4305,27 +4170,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4334,7 +4188,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4369,27 +4222,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4398,7 +4240,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4433,27 +4274,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4462,7 +4292,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4497,27 +4326,16 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         },
         {
-          "cards": {
-            "cardPadding": null,
-            "cardRound": null
-          },
+          "cards": {},
           "color": {
             "cardColor": "#73BF69",
             "colorScale": "sqrt",
@@ -4526,7 +4344,6 @@
             "mode": "opacity"
           },
           "dataFormat": "timeseries",
-          "datasource": null,
           "description": "",
           "gridPos": {
             "h": 8,
@@ -4561,21 +4378,13 @@
           "xAxis": {
             "show": true
           },
-          "xBucketNumber": null,
-          "xBucketSize": null,
           "yAxis": {
             "decimals": 0,
             "format": "s",
             "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null,
-            "width": null
+            "show": true
           },
-          "yBucketBound": "auto",
-          "yBucketNumber": null,
-          "yBucketSize": null
+          "yBucketBound": "auto"
         }
       ],
       "repeat": "pool",
@@ -4584,17 +4393,15 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 10
       },
       "id": 167,
       "panels": [
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -4634,8 +4441,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4684,7 +4490,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -4724,8 +4529,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4774,7 +4578,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -4814,8 +4617,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4864,7 +4666,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -4904,8 +4705,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4954,7 +4754,6 @@
           "type": "timeseries"
         },
         {
-          "datasource": null,
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -4994,8 +4793,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -5049,46 +4847,25 @@
       "type": "row"
     }
   ],
-  "refresh": false,
-  "schemaVersion": 31,
+  "refresh": "",
+  "schemaVersion": 35,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "allValue": null,
-        "current": {},
-        "datasource": "VictoriaMetrics",
-        "definition": "label_values(zpool_stats_size, instance)",
-        "description": null,
-        "error": {
-          "config": {
-            "data": {
-              "end": "1645251252",
-              "match[]": "zpool_stats_size",
-              "start": "1645240452"
-            },
-            "headers": {
-              "Content-Type": "application/x-www-form-urlencoded",
-              "X-Grafana-Org-Id": 1
-            },
-            "hideFromInspector": true,
-            "method": "POST",
-            "retry": 0,
-            "url": "api/datasources/proxy/1/api/v1/series"
-          },
-          "data": {
-            "error": "",
-            "message": "",
-            "response": ""
-          },
-          "message": "Query error: 502 ",
-          "status": 502,
-          "statusText": ""
+        "current": {
+          "selected": false,
+          "text": "antiochia",
+          "value": "antiochia"
         },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "P4169E866C3094E38"
+        },
+        "definition": "label_values(zpool_stats_size, instance)",
         "hide": 0,
         "includeAll": false,
-        "label": null,
         "multi": false,
         "name": "instance",
         "options": [],
@@ -5103,39 +4880,18 @@
         "type": "query"
       },
       {
-        "allValue": null,
-        "current": {},
-        "datasource": "VictoriaMetrics",
-        "definition": "label_values(zpool_stats_size{instance=\"$instance\", vdev=\"root\"}, name)",
-        "description": null,
-        "error": {
-          "config": {
-            "data": {
-              "end": "1645251252",
-              "match[]": "zpool_stats_size{instance=\"antiochia\", vdev=\"root\"}",
-              "start": "1645240452"
-            },
-            "headers": {
-              "Content-Type": "application/x-www-form-urlencoded",
-              "X-Grafana-Org-Id": 1
-            },
-            "hideFromInspector": true,
-            "method": "POST",
-            "retry": 0,
-            "url": "api/datasources/proxy/1/api/v1/series"
-          },
-          "data": {
-            "error": "",
-            "message": "",
-            "response": ""
-          },
-          "message": "Query error: 502 ",
-          "status": 502,
-          "statusText": ""
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
         },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "P4169E866C3094E38"
+        },
+        "definition": "label_values(zpool_stats_size{instance=\"$instance\", vdev=\"root\"}, name)",
         "hide": 0,
         "includeAll": true,
-        "label": null,
         "multi": true,
         "name": "pool",
         "options": [],
@@ -5150,36 +4906,16 @@
         "type": "query"
       },
       {
-        "allValue": null,
-        "current": {},
-        "datasource": "VictoriaMetrics",
-        "definition": "label_values(zpool_stats_size{instance=\"$instance\", name=~\"$pool\", vdev!~\"root\", path=\"\"}, vdev)",
-        "description": null,
-        "error": {
-          "config": {
-            "data": {
-              "end": "1645251252",
-              "match[]": "zpool_stats_size{instance=\"antiochia\", name=~\"()\", vdev!~\"root\", path=\"\"}",
-              "start": "1645240452"
-            },
-            "headers": {
-              "Content-Type": "application/x-www-form-urlencoded",
-              "X-Grafana-Org-Id": 1
-            },
-            "hideFromInspector": true,
-            "method": "POST",
-            "retry": 0,
-            "url": "api/datasources/proxy/1/api/v1/series"
-          },
-          "data": {
-            "error": "",
-            "message": "",
-            "response": ""
-          },
-          "message": "Query error: 502 ",
-          "status": 502,
-          "statusText": ""
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
         },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "P4169E866C3094E38"
+        },
+        "definition": "label_values(zpool_stats_size{instance=\"$instance\", name=~\"$pool\", vdev!~\"root\", path=\"\"}, vdev)",
         "hide": 0,
         "includeAll": true,
         "label": "VDEV",
@@ -5206,5 +4942,6 @@
   "timezone": "",
   "title": "ZFS",
   "uid": "S4h3bGnnk",
-  "version": 96
+  "version": 4,
+  "weekStart": ""
 }
